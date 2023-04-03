@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyFirstApplication</string>
+    <string name="dd_mm_yyyy">dd_mm_yyyy</string>
+    <string name="select">select</string>
+    <string name="birth_date">Date de naissance</string>
+    <string name="Validate">Valider</string>
+    <string name="Addnumber">Ajouter un numéro</string>
+</resources>

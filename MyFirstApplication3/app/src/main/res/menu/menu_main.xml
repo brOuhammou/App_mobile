@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/resetAction"
+        android:title="reset_action"
+        android:onClick="resetAction">
+    </item>
+    <item android:id="@+id/WikiOption"
+        android:title="Wikipedia"
+        android:onClick="WikiOption">
+    </item>
+    <item android:id="@+id/PartagerOption"
+        android:title="Partager"
+        android:onClick="PartagerOption">
+    </item>
+</menu>

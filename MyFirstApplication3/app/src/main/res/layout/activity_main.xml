@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/myConstraintLayout"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Prenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Prénom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/Prenom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Prenom"
+            app:layout_constraintTop_toTopOf="@+id/Prenom"
+        app:layout_constraintVertical_bias="0.367" />
+
+    <TextView
+        android:id="@+id/Nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Nom"
+        app:layout_constraintStart_toStartOf="@+id/Prenom"
+        app:layout_constraintTop_toBottomOf="@+id/Prenom" />
+
+    <EditText
+        android:id="@+id/editNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/Nom"
+        app:layout_constraintStart_toStartOf="@+id/editPrenom"
+        app:layout_constraintTop_toTopOf="@+id/Nom" />
+
+
+    <LinearLayout
+        android:id="@+id/birthDateLayout"
+        android:layout_width="355dp"
+        android:layout_height="58dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="114dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/spinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPrenom">
+
+        <TextView
+            android:id="@+id/birthDateText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Date de Naissance"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/BirthDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/dd_mm_yyyy"
+            android:textSize="16sp"
+            tools:text="dd_mm_yyyy" />
+
+        <Button
+            android:id="@+id/btnEnterBirthdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/select"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/Validate"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Valider" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/Addnumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <ScrollView
+        android:id="@+id/Layoutaddnumber"
+        android:layout_width="353dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2">
+
+        <LinearLayout
+            android:id="@+id/Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/departement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="19dp"
+        android:text="Département"
+        app:layout_constraintEnd_toStartOf="@+id/spinner2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthDateLayout" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="207dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="250dp"
+        android:entries="@array/departments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
